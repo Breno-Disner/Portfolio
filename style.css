@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+link{
+    text-decoration: inherit;
+    color: inherit; 
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+header {
+    display: flex;
+    min-height: 50px;
+    height: 5%;
+    background-color: black;
+
+}
+#fontup{ margin-left:100px ;}
+#fontup,#fontdown{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: yellow;
+    width: 50px;
+}
+#fontup:hover , #fontdown:hover{
+    background-color: darkkhaki;
+}
+main{
+    font-size: 20px;
+    text-align: center;
+}
+main > h1 {
+    margin: 40px;
+    font-family: "Parisienne", cursive;
+}
+#table {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500px;
+    min-height: fit-content;
+    max-width: 90%;
+    margin: 5%;
+    background-color: blanchedalmond;
+}
+#table > a {
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin: 10px;
+    min-height: 600px;
+    height: max-content;
+    width: 450px;
+    background-color: black;
+}
+#table > a > h2{
+    position: absolute;
+}
+#table > a > p{
+    position: relative;
+}
+#table > a > h2 , p {
+    max-width: 280px;
+    text-align: center;
+    color: white;
+}
+#table > a > p{
+    opacity: 0;
+}
+#table > a > h2{
+    opacity: 100;
+}
+#table > a:hover > p{
+    animation-name: show;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#table > a:hover > h2{
+    animation-name: hide;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#table > a:not(:hover) > p{
+    animation-name: hide;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+ #table > a:not(:hover) > h2{
+    animation-name: show;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#table>a:hover{
+    animation-name:hoverlink ;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#table>a:not(:hover){
+    animation-name:hoverlinkrelease ;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hoverlink {
+    from{background-color: black;}
+    to{background-color: rgb(100, 100, 100);}
+}
+@keyframes hoverlinkrelease {
+    from{background-color: rgb(100, 100, 100)}
+    to{background-color: black;}
+}
+
+@keyframes show {
+    from{opacity: 0;}
+    to{opacity: 100;}
+}
+@keyframes hide {
+    from{opacity: 100;}
+    to{opacity: 0;}
+}
